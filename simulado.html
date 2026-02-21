@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fazer Simulado</title>
+  <link rel="stylesheet" href="simulado.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="simulados.html" class="brand">Enfermagem com a Valdineia</a>
+      <nav class="nav-actions">
+        <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Alternar tema">🌙 Tema</button>
+        <a href="historico.html" class="btn btn-ghost">Histórico</a>
+        <a href="simulados.html" class="btn btn-ghost">Simulados</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 id="quizTitle">Simulado</h1>
+        <p id="quizDesc"></p>
+      </div>
+
+      <div class="quiz-shell">
+        <div class="progress">
+          <div class="progress-top">
+            <span id="progressText">Questão 1</span>
+            <span id="streakText" class="streak">🔥 Sequência: 0</span>
+          </div>
+          <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+        </div>
+
+        <section id="questionCard" class="q-card" aria-live="polite"></section>
+
+        <div class="actions">
+          <button id="nextBtn" class="btn hidden" type="button">Próxima</button>
+          <button id="finishBtn" class="btn btn-ghost" type="button">Finalizar</button>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="quiz-bank.js"></script>
+  <script src="storage.js"></script>
+  <script src="auth-guard.js"></script>
+  <script src="theme.js"></script>
+  <script src="simulado.js"></script>
+</body>
+</html>

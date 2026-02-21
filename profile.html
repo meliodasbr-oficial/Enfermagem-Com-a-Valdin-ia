@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Perfil | Enfermagem com a Valdineia</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+
+  <body>
+    <header class="header">
+  <div class="container nav">
+    <a href="index.html" class="brand">Enfermagem com a Valdineia</a>
+
+    <!-- Botão menu (mobile) -->
+    <button
+  id="menuBtn"
+  class="menu-btn"
+  type="button"
+  aria-label="Abrir menu"
+  aria-expanded="false"
+>
+<span class="menu-text">Menu</span>
+  <span class="menu-bars" aria-hidden="true"></span>
+</button>
+
+    <!-- Navegação -->
+    <nav id="mobileNav" class="nav-actions">
+      <a href="simulados.html" id="simuladosLink" class="btn btn-ghost hidden">Simulado Online</a>
+      <a href="index.html" class="btn btn-ghost">Início</a>
+      <a href="#contato" class="btn btn-ghost">Contato</a>
+      <button id="logoutBtn" class="btn" type="button">Sair</button>
+    </nav>
+  </div>
+
+  <!-- Fundo escuro ao abrir menu -->
+  <div id="menuBackdrop" class="menu-backdrop hidden" aria-hidden="true"></div>
+</header>
+
+    <main class="section">
+      <div class="container">
+        <!-- CABEÇALHO -->
+        <section class="profile-head-card">
+          <img id="profileAvatar" class="profile-avatar" alt="Foto do perfil" />
+
+          <div class="profile-head-text">
+            <h1 id="profileTitle" class="profile-title">Meu Perfil</h1>
+            <p id="profileSubtitle" class="profile-subtitle"></p>
+
+            <div class="profile-head-actions">
+              <button id="changePhotoBtn" class="btn btn-small btn-ghost" type="button">
+                Alterar foto
+              </button>
+
+              <input id="avatarFileProfile" type="file" accept="image/*" class="hidden" />
+              <small class="muted">JPG/PNG • Recomendado até 1,2MB</small>
+            </div>
+          </div>
+        </section>
+
+        <div class="profile-grid">
+          <article class="card profile-card">
+            <div class="card-head">
+              <h2>Downloads</h2>
+              <span class="pill" id="pdfCount">0</span>
+            </div>
+            <p class="muted profile-hint">Seus materiais liberados aparecem aqui.</p>
+            <ul id="pdfList" class="list-clean"></ul>
+          </article>
+
+          <article class="card profile-card">
+            <div class="card-head">
+              <h2>Minhas compras</h2>
+              <span class="pill" id="purchaseCount">0</span>
+            </div>
+            <p class="muted profile-hint">Histórico de compras e datas.</p>
+            <ul id="purchaseList" class="list-clean"></ul>
+          </article>
+        </div>
+
+        <section class="card profile-card profile-comment">
+          <div class="card-head">
+            <h2>Enviar comentário</h2>
+            <span class="pill">Opcional</span>
+          </div>
+
+          <form id="commentForm" class="form profile-form">
+            <label for="commentRating">Sua nota</label>
+            <select id="commentRating" required>
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+
+            <label for="commentText">Seu comentário</label>
+            <textarea id="commentText" rows="4" required placeholder="Conte sua experiência com os materiais"></textarea>
+
+            <div class="profile-form-actions">
+              <button type="submit" class="btn">Publicar</button>
+              <span class="muted">Seu comentário aparece na página inicial.</span>
+            </div>
+          </form>
+        </section>
+
+        <!-- CONTATO -->
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="contact-mini">
+            <div class="contact-mini-head">
+              <div>
+                <h2 class="contact-mini-title">Contato</h2>
+                <p class="contact-mini-desc">
+                  Envie sua mensagem com nome e email.
+                </p>
+              </div>
+
+              <div class="contact-mini-meta">
+                <span class="pill">Suporte por email</span>
+                <a class="contact-mini-email" href="mailto:contato@seusite.com">contato@seusite.com</a>
+              </div>
+            </div>
+
+            <form id="contactFormIndex" class="contact-mini-form">
+              <div class="contact-mini-grid">
+                <label class="field">
+                  <span class="field-label">Seu Nome</span>
+                  <input id="contactNameIndex" class="field-input" type="text" placeholder="Seu nome completo" required />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Seu Email</span>
+                  <input id="contactEmailIndex" class="field-input" type="email" placeholder="voce@email.com" required />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Sua Mensagem</span>
+                <textarea
+                  id="contactMsgIndex"
+                  class="field-input field-textarea"
+                  rows="6"
+                  placeholder="Digite sua mensagem..."
+                  required
+                ></textarea>
+              </label>
+
+              <div class="contact-mini-actions">
+                <button class="btn" type="submit">Enviar</button>
+                <p class="contact-note">*</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

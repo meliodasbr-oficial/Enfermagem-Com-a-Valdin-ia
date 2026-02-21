@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Simulados</title>
+  <link rel="stylesheet" href="historico.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="simulados.html" class="brand">Enfermagem com a Valdineia</a>
+      <nav class="nav-actions">
+        <a href="simulados.html" class="btn btn-ghost">Simulados</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Histórico</h1>
+        <p id="subtitle"></p>
+      </div>
+
+      <div id="historyList" class="cards"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <script src="storage.js"></script>
+  <script src="historico.js"></script>
+</body>
+</html>

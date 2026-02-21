@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulado Online | Enfermagem com a Valdineia</title>
+
+    <!-- Primeiro o menu global -->
+    <link rel="stylesheet" href="menu.css" />
+    <!-- Depois o CSS da página -->
+    <link rel="stylesheet" href="simulados.css" />
+  </head>
+
+  <body>
+    <!-- HEADER FIXO (sticky) -->
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand">Enfermagem com a Valdineia</a>
+
+        <button
+          id="menuBtn"
+          class="menu-btn"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+        >
+          <span class="menu-text">Menu</span>
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav id="mobileNav" class="nav-actions" aria-label="Ações">
+          <a id="profileLink" class="btn btn-ghost" href="profile.html">Meu Perfil</a>
+          <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Alternar tema"> 🌙 Tema </button>
+          <button id="logoutBtn" class="btn" type="button">Sair</button>
+        </nav>
+      </div>
+
+      <div id="menuBackdrop" class="menu-backdrop hidden" aria-hidden="true"></div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Simulado Online</h1>
+          <p>Disponível apenas para compras habilitadas (Profissional/Premium).</p>
+
+          <div class="premium-bar">
+            <div><strong>Premium</strong> — faça simulados, veja histórico e compare tentativas.</div>
+            <span class="premium-pill" id="accessPill">Verificando acesso...</span>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="search">
+            <span class="search-ico">🔎</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Pesquisar simulados (ex: Anatomia, P1, Biossegurança...)"
+              autocomplete="off"
+            />
+          </div>
+
+          <button id="suggestBtn" class="btn btn-ghost" type="button">
+            + Sugerir simulado
+          </button>
+        </div>
+
+        <div id="simuladosContainer" class="cards"></div>
+      </div>
+    </main>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <!-- Modal Sugestão -->
+    <div id="suggestModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close="1"></div>
+
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="suggestTitle">
+        <div class="modal-head">
+          <h2 id="suggestTitle">Sugerir novo simulado</h2>
+          <button class="icon-btn" type="button" data-close="1" aria-label="Fechar">✕</button>
+        </div>
+
+        <form id="suggestForm" class="modal-body">
+          <label class="field">
+            <span>Título do simulado</span>
+            <input id="sugTitle" required placeholder="Ex: Simulado de Anatomia (Sistema Respiratório)" />
+          </label>
+
+          <label class="field">
+            <span>Descrição / Conteúdo</span>
+            <textarea id="sugDesc" rows="4" placeholder="Ex: Questões sobre ossos, músculos, sistemas..."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Seu e-mail (para avisarmos quando ficar pronto)</span>
+            <input id="sugEmail" type="email" placeholder="seuemail@gmail.com" />
+          </label>
+
+          <div class="modal-actions">
+            <button class="btn" type="submit">Enviar sugestão</button>
+            <button class="btn btn-ghost" type="button" data-close="1">Cancelar</button>
+          </div>
+
+          <p class="hint">
+            *Por enquanto a sugestão fica salva localmente. Depois vamos ligar com a API de e-mail.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Seus scripts normais -->
+    <script src="quiz-bank.js"></script>
+    <script src="storage.js"></script>
+    <script src="auth-guard.js"></script>
+
+    <!-- Scripts globais -->
+    <script src="menu.js"></script>
+    <script src="theme.js"></script>
+
+    <!-- Script da página -->
+    <script src="simulados.js"></script>
+  </body>
+</html>

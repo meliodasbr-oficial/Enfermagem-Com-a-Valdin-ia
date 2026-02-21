@@ -1,0 +1,166 @@
+/* menu.css (global) */
+.hidden { display: none !important; }
+
+/* Header fixo (sticky) */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg2) 85%, transparent);
+}
+
+.nav{
+  min-height: 72px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand{
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--text);
+}
+
+/* Botão menu */
+.menu-btn{
+  display: none;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg2) 92%, transparent);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 12px;
+  color: var(--text);
+}
+
+.menu-text{
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.2px;
+}
+
+.menu-btn:hover{
+  border-color: color-mix(in srgb, var(--brand) 28%, var(--line));
+}
+
+/* Ícone hambúrguer */
+.menu-bars{
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 999px;
+  display: block;
+}
+
+.menu-bars::before,
+.menu-bars::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:20px;
+  height:2px;
+  background: var(--text);
+  border-radius:999px;
+  transition: transform .15s ease, top .15s ease, opacity .15s ease;
+}
+
+.menu-bars::before{ top:-6px; }
+.menu-bars::after{ top: 6px; }
+
+.menu-btn.open .menu-bars{ background: transparent; }
+.menu-btn.open .menu-bars::before{ top:0; transform: rotate(45deg); }
+.menu-btn.open .menu-bars::after{ top:0; transform: rotate(-45deg); }
+
+/* Backdrop */
+.menu-backdrop{
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+/* Nav desktop */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Mobile dropdown */
+@media (max-width: 860px){
+  .menu-btn{ display: inline-flex; }
+
+  .nav-actions{
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    top: 78px;
+    z-index: 60;
+
+    display: grid;
+    gap: 10px;
+    padding: 14px;
+
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+    background: color-mix(in srgb, var(--bg2) 92%, transparent);
+
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .nav-actions.open{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-actions .btn{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px){
+  .menu-text{ display:none; }
+  .menu-btn{ padding: 0; width: 46px; }
+}
+
+.btn,
+.btn-ghost,
+.btn-profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 14px;
+
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+#logoutBtn {
+  border-color: rgba(235, 16, 16, 0.601);
+}
+
+#logoutBtn:hover {
+  background: rgba(223, 35, 35, 0.415);
+}

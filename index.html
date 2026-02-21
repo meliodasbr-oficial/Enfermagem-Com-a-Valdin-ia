@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enfermagem com a Valdineia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <a href="index.html" class="brand">Enfermagem com a Valdineia</a>
+            <button id="menuBtn" class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false">
+              <span class="menu-text">Menu</span>
+              <span class="menu-bars" aria-hidden="true"></span>
+            </button>
+
+        <nav id="mobileNav" class="nav-actions">
+          <a href="#conteudos" class="link">Conteúdos</a>
+          <a href="#pacotes" class="link">Pacotes</a>
+          <a href="#comentarios" class="link">Comentários</a>
+          <a href="#contato" class="link">Contato</a>
+          <a href="#faq" class="link">FAQ</a>
+          <a id="profileLink" class="btn btn-ghost hidden" href="profile.html">Meu Perfil</a>
+          <button id="openLogin" class="btn" type="button">Login</button>
+          <button id="logoutBtn" class="btn btn-ghost hidden" type="button">Sair</button>
+        </nav>
+      </div>
+
+      <!-- Fundo escuro ao abrir menu -->
+      <div id="menuBackdrop" class="menu-backdrop hidden" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-card">
+            <img src="assets/valdineia-placeholder.png" alt="Foto da Valdineia" />
+            <p class="muted">Materiais atualizados • Práticos • Direto ao ponto</p>
+          </div>
+
+          <div>
+            <p class="eyebrow">PDFs, Provas (P1/P2) e Simulados para Enfermagem</p>
+            <h1 class="hero-title">Conteúdo profissional para evoluir com segurança na prática e nas provas.</h1>
+
+            <p class="hero-text">
+              Protocolos, rotinas, guias e coleções de provas de faculdade (P1/P2) para estudar com clareza e confiança.
+            </p>
+
+            <ul class="hero-badges">
+              <li>✅ Acesso imediato ao conteúdo</li>
+              <li>✅ Materiais de prática + estudo (Provas/P1/P2)</li>
+              <li>✅ Simulados online nos pacotes Pro/Premium</li>
+            </ul>
+
+            <div class="hero-cta">
+              <a class="btn" href="#pacotes">Ver pacotes</a>
+              <a class="btn btn-ghost" href="#conteudos">O que está incluído</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE VOCÊ RECEBE -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>O que você recebe</h2>
+            <p>Conteúdo organizado para usar no plantão e estudar com foco.</p>
+          </div>
+
+          <div class="info-grid">
+            <article class="info-card">
+              <h3>PDFs práticos</h3>
+              <p class="muted">Checklists, protocolos, rotinas e guias para o dia a dia.</p>
+            </article>
+
+            <article class="info-card">
+              <h3>Provas de faculdade</h3>
+              <p class="muted">Coleções de provas (P1/P2) por tema/assunto (quando disponível).</p>
+            </article>
+
+            <article class="info-card">
+              <h3>Simulados online</h3>
+              <p class="muted">Treine com questões (liberado nos pacotes Pro/Premium).</p>
+            </article>
+
+            <article class="info-card">
+              <h3>Atualizações</h3>
+              <p class="muted">Materiais podem ser atualizados/expandidos ao longo do tempo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEÚDOS -->
+      <section id="conteudos" class="section soft">
+        <div class="container">
+          <div class="section-head">
+            <h2>Conteúdos disponíveis</h2>
+            <p>Seleção de materiais para prática e para provas.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Protocolos Essenciais</h3>
+              <ul>
+                <li>Segurança do paciente</li>
+                <li>Rotinas de enfermagem</li>
+                <li>Cuidados e condutas</li>
+              </ul>
+              <a class="btn btn-ghost" href="#pacotes">Ver pacotes</a>
+            </article>
+
+            <article class="card">
+              <h3>Curativos e Feridas</h3>
+              <ul>
+                <li>Avaliação de feridas</li>
+                <li>Técnicas e coberturas</li>
+                <li>Cuidados e prevenção</li>
+              </ul>
+              <a class="btn btn-ghost" href="#pacotes">Ver pacotes</a>
+            </article>
+
+            <article class="card">
+              <h3>Farmacologia & Cálculo</h3>
+              <ul>
+                <li>Farmacologia básica</li>
+                <li>Cálculo de medicação</li>
+                <li>Dicas e exercícios</li>
+              </ul>
+              <a class="btn btn-ghost" href="#pacotes">Ver pacotes</a>
+            </article>
+
+            <article class="card featured">
+              <span class="tag">NOVO</span>
+              <h3>Provas (P1/P2) & Revisões</h3>
+              <ul>
+                <li>Provas por assunto</li>
+                <li>Resumos e revisão</li>
+                <li>Lista de questões</li>
+              </ul>
+              <a class="btn" href="#pacotes">Comprar pacote</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PACOTES -->
+      <section id="pacotes" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Pacotes</h2>
+            <p>A conta é criada no momento da compra.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Pacote Iniciante</h3>
+              <ul>
+                <li>Guia de Anotações de Enfermagem</li>
+                <li>Checklist de Plantão</li>
+                <li>Rotina básica do plantão</li>
+              </ul>
+              <strong>R$ 49,90</strong>
+              <button
+                class="btn buy-btn"
+                data-name="Pacote Iniciante"
+                data-price="R$ 49,90"
+                data-simulado="false"
+                data-pdfs="Guia de Anotações de Enfermagem|Checklist de Plantão|Rotina Básica do Plantão"
+                type="button"
+              >
+                Comprar
+              </button>
+            </article>
+
+            <article class="card featured">
+              <span class="tag">Mais vendido</span>
+              <h3>Pacote Profissional</h3>
+              <ul>
+                <li>PDFs completos (protocolos + prática)</li>
+                <li>Inclui: Curativos e Feridas</li>
+                <li>Acesso ao Simulado Online</li>
+              </ul>
+              <strong>R$ 119,90</strong>
+              <button
+                class="btn buy-btn"
+                data-name="Pacote Profissional"
+                data-price="R$ 119,90"
+                data-simulado="true"
+                data-pdfs="Guia de Anotações de Enfermagem|Checklist de Plantão|Protocolos Essenciais|Segurança do Paciente|Curativos e Feridas"
+                type="button"
+              >
+                Comprar
+              </button>
+            </article>
+
+            <article class="card">
+              <h3>Pacote Provas (P1/P2)</h3>
+              <ul>
+                <li>Banco de Provas (P1/P2)</li>
+                <li>Listas de questões por tema</li>
+                <li>Revisões rápidas</li>
+              </ul>
+              <strong>R$ 89,90</strong>
+              <button
+                class="btn buy-btn"
+                data-name="Pacote Provas (P1/P2)"
+                data-price="R$ 89,90"
+                data-simulado="false"
+                data-pdfs="Provas P1 (seleção)|Provas P2 (seleção)|Questões por tema|Revisão rápida"
+                type="button"
+              >
+                Comprar
+              </button>
+            </article>
+
+            <article class="card">
+              <h3>Pacote Premium</h3>
+              <ul>
+                <li>Todos os PDFs + bônus</li>
+                <li>Provas (P1/P2) + revisões</li>
+                <li>Simulado Online completo</li>
+              </ul>
+              <strong>R$ 179,90</strong>
+              <button
+                class="btn buy-btn"
+                data-name="Pacote Premium"
+                data-price="R$ 179,90"
+                data-simulado="true"
+                data-pdfs="Guia de Anotações de Enfermagem|Checklist de Plantão|Protocolos Essenciais|Segurança do Paciente|Curativos e Feridas|Farmacologia Básica|Cálculo de Medicação|Provas P1 (seleção)|Provas P2 (seleção)|Questões por tema|Revisão rápida"
+                type="button"
+              >
+                Comprar
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMENTÁRIOS -->
+      <section id="comentarios" class="section soft">
+        <div class="container">
+          <div class="comments-head">
+            <div class="section-head">
+              <h2>Comentários de alunas</h2>
+              <p>Depoimentos reais de quem já utiliza os materiais.</p>
+            </div>
+            <a class="more-link" href="comentarios.html">→ Mais comentários</a>
+          </div>
+
+          <div class="carousel">
+            <button class="carousel-btn" id="prevComment" type="button" aria-label="Voltar">‹</button>
+            <div class="carousel-track" id="commentsTrack" aria-live="polite"></div>
+            <button class="carousel-btn" id="nextComment" type="button" aria-label="Avançar">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="contact-mini">
+            <div class="contact-mini-head">
+              <div>
+                <h2 class="contact-mini-title">Contato</h2>
+                <p class="contact-mini-desc">
+                  Envie sua mensagem com nome e email.
+                </p>
+              </div>
+
+              <div class="contact-mini-meta">
+                <span class="pill">Suporte por email</span>
+                <a class="contact-mini-email" href="mailto:contato@seusite.com">contato@seusite.com</a>
+              </div>
+            </div>
+
+            <form id="contactFormIndex" class="contact-mini-form">
+              <div class="contact-mini-grid">
+                <label class="field">
+                  <span class="field-label">Seu Nome</span>
+                  <input id="contactNameIndex" class="field-input" type="text" placeholder="Seu nome completo" required />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Seu Email</span>
+                  <input id="contactEmailIndex" class="field-input" type="email" placeholder="voce@email.com" required />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Sua Mensagem</span>
+                <textarea
+                  id="contactMsgIndex"
+                  class="field-input field-textarea"
+                  rows="6"
+                  placeholder="Digite sua mensagem..."
+                  required
+                ></textarea>
+              </label>
+
+              <div class="contact-mini-actions">
+                <button class="btn" type="submit">Enviar</button>
+                <p class="contact-note">*</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Perguntas frequentes</h2>
+            <p>Respostas rápidas sobre acesso e compra.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>Como recebo os materiais?</summary>
+              <p class="muted">Após a compra, sua conta é criada e você terá acesso pelo seu perfil.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>As provas (P1/P2) são de quais faculdades?</summary>
+              <p class="muted">
+                As coleções dependem do material disponível. O pacote é organizado por temas/assuntos para facilitar o estudo.
+              </p>
+            </details>
+
+            <details class="faq-item">
+              <summary>O simulado fica liberado em quais pacotes?</summary>
+              <p class="muted">Pacote Profissional e Pacote Premium.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Pagamento é só Pix?</summary>
+              <p class="muted">Sim, no momento está configurado apenas Pix.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- LOGIN -->
+    <dialog id="loginDialog">
+      <form id="loginForm" class="form" method="dialog">
+        <h3>Entrar</h3>
+
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input id="loginEmail" class="field-input" type="email" required placeholder="voce@email.com" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Senha</span>
+          <input id="loginPassword" class="field-input" type="password" required placeholder="Sua senha" />
+        </label>
+
+        <div class="dialog-actions">
+          <button type="button" class="btn btn-ghost" id="closeLogin">Cancelar</button>
+          <button type="submit" class="btn">Entrar</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- CHECKOUT -->
+    <dialog id="checkoutDialog">
+      <form id="checkoutForm" class="form" method="dialog">
+        <h3>Finalizar compra e criar conta</h3>
+        <p id="selectedPackage" class="muted"></p>
+
+        <label class="field">
+          <span class="field-label">Nome completo</span>
+          <input id="fullName" class="field-input" type="text" required placeholder="Seu nome completo" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Endereço</span>
+          <input id="address" class="field-input" type="text" required placeholder="Rua, número, bairro, cidade" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">CPF</span>
+          <input id="cpf" class="field-input" type="text" required placeholder="000.000.000-00" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input id="email" class="field-input" type="email" required placeholder="voce@email.com" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Senha</span>
+          <input id="password" class="field-input" type="password" required minlength="6" placeholder="Mínimo 6 caracteres" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Método de pagamento</span>
+          <select id="paymentMethod" class="field-input" required>
+            <option value="">Selecione</option>
+            <option value="Pix">Pix</option>
+          </select>
+        </label>
+
+        <div class="dialog-actions">
+          <button type="button" class="btn btn-ghost" id="closeCheckout">Cancelar</button>
+          <button type="submit" class="btn">Confirmar compra</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <p class="footer-copy">© <span id="year"></span> Enfermagem com a Valdineia. Todos os direitos reservados.</p>
+
+        <a class="footer-instagram" href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener">
+          Instagram <span class="footer-arrow">↗</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

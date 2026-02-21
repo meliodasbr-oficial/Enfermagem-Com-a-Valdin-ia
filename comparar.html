@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparar Tentativas</title>
+  <link rel="stylesheet" href="comparar.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="simulados.html" class="brand">Enfermagem com a Valdineia</a>
+      <nav class="nav-actions">
+        <a href="historico.html" class="btn btn-ghost">Histórico</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Comparar tentativas</h1>
+        <p id="subtitle"></p>
+      </div>
+
+      <div class="compare-select">
+        <select id="aSelect"></select>
+        <select id="bSelect"></select>
+        <button id="compareBtn" class="btn">Comparar</button>
+      </div>
+
+      <div id="result" class="compare-result"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <script src="storage.js"></script>
+  <script src="comparar.js"></script>
+</body>
+</html>
